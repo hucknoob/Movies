@@ -1,14 +1,19 @@
-package com.andrdoid.movies;
+package com.andrdoid.movies
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+import android.widget.Button
+import com.andrdoid.movies.R
 
-import android.os.Bundle;
-
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+private const val TAG = "MainActivity"
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        val button: Button = findViewById(R.id.button)
+        button.setOnClickListener{
+            Log.d(TAG, "Click")
+        }
     }
 }
